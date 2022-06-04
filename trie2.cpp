@@ -86,7 +86,9 @@ class Trie {
     }
     return node -> getPrefix();
   }
-
+  
+   //erase will only work properly if given word is already present in trie;
+  // ex: lets suppose "apple" is inserted then we call erase with "app" then it will erase "app" althouth it is not present. 
   void erase(string & word) {
     Node * node = root;
     for (int i = 0; i < word.length(); i++) {
